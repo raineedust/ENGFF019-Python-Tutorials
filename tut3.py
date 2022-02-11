@@ -1,4 +1,4 @@
-# 1
+# # 1 PosNegNumbers.py
 
 # value = int(input("Enter your number:"))
 # if value >= 0:
@@ -7,7 +7,7 @@
 # else:
 #     print("It's a negative number")
 
-# 2
+# # 2 EvenOdd.py
 
 # value = int(input("Enter your number:"))
 
@@ -17,7 +17,7 @@
 # else:
 #     print("odd number")
 
-# 3
+# # 3 AreaRectangle.py
 
 # print("Enter the length and width of the first rectangle below")
 # length1 = int(input("1st rectangle length:"))
@@ -35,7 +35,7 @@
 # else:
 #     print("The areas are not the same.")
 
-# 4
+# # 4 CreditCard.py
 
 # annualSalary = int(input("Please enter your annual salary in RM:"))
 # yearsEmployed = int(input("Please enter the number of years employed:"))
@@ -45,7 +45,7 @@
 # else:
 #     print("Sorry, you do not qualify for credit card application.")
 
-# 5
+# # 5 MagicDates.py
 
 # print("Enter the date in the following format:[dd/mm/yy]")
 # day = int(input("What is the day? :"))
