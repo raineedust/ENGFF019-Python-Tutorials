@@ -1,29 +1,35 @@
 # Anthony Saopa Phiri 20401485
 # Tan Jin Yi 20396553
 
-import mainModule
-import careerResult
+
+from careerResult import careerOutput
 
 
-def Check(startTest):
+def careerInput(startTest):
 
     while startTest == 1:
-        print(name, ", please enter either (1) if you agree, or (2) if you disagree")
+        print(", please enter either (1) if you agree, or (2) if you disagree")
 
-        i = int(input("Would you enjoy designing a magazine cover?"))
-        i = input("Would you enjoy taking pictures of nature?") + i
+        creativeChoice = int(input("Would you enjoy designing a magazine cover?"))
+        creativeChoice = (
+            int(input("Would you enjoy taking pictures of nature?")) + creativeChoice
+        )
 
-        j = int(input("Do scientific experiments interest you?"))
-        j = input("Does researching a new medicine sound attractive to you?") + j
+        stemChoice = int(input("Do scientific experiments interest you?"))
+        stemChoice = (
+            int(input("Does researching a new medicine sound attractive to you?"))
+            + stemChoice
+        )
 
-        k = int(input("Would you enjoy installing a hardwood floor?"))
-        k = input("Do you enjoy assembling DIY (DO-IT-YOURSELF) products") + k
+        laborChoice = int(input("Would you enjoy installing a hardwood floor?"))
+        laborChoice = (
+            int(input("Do you enjoy assembling DIY (DO-IT-YOURSELF) products"))
+            + laborChoice
+        )
 
         if startTest == 2:
-            print("Thank you for your time", name, "!")
+            print("Thank you for your time", "!")
         else:
             print("Error, please enter either (1) or (2)")
         startTest = startTest + 1
-
-
-careerResult()
+        careerInput(creativeChoice, stemChoice, laborChoice)

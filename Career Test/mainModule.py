@@ -2,13 +2,14 @@
 # Tan Jin Yi 20396553
 
 
-import careerQuestions
+from careerQuestions import careerInput
 import errorCheck
+import careerResult
 
 
 def main():
     print(
-        "Hello, welcome to the Career Test!/n",
+        "Hello, welcome to the Career Test",
     )
     firstName = input("Please enter your first name: ")
     lastName = input("Please enter your last name: ")
@@ -16,15 +17,13 @@ def main():
 
     # Capturing the users' name, and checking for any error.
 
-    print("Welcome ", name, sep="")
+    print("Welcome ", name)
     startTest = int(
-        input("Click (1) to start the test, and click (2) to end your session")
+        input("Enter (1) to start the test, and enter (2) to end your session")
     )
-    career = "lol"
+    careerInput(startTest)
 
     # Prompting the user to begin the test.
-
-    print(name, ", an ideal career choice for you would be ", career)
 
 
 main()
