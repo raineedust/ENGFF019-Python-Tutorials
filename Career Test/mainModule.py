@@ -5,9 +5,22 @@
 from careerQuestions import careerInput
 import careerResult
 
-startTest = 1
 
-while startTest == True:
+while True:
+
+    print("Hello, welcome to our Career Test!")
+    firstName = input("Please enter your first name: ")
+    lastName = input("Please enter your last name: ")
+    startTest = int(
+        input("Please enter (1) to start the test, or (0) to end your session.")
+    )
+    careerInput(startTest)
+    check = input("Do you want to continue? Type Y or N. ")
+    if check.upper == "Y":
+        continue
+    else:
+        print("ok, thx for ur time")
+        break
 
     def main():
         print("Hello, welcome to our Career Test!")
@@ -18,17 +31,6 @@ while startTest == True:
         else:
             print("Error! Your name should only contain letters.")
         return
-
-    def test():
-        startTest = int(
-            input("Please enter (1) to start the test, or (0) to end your session.")
-        )
-        careerInput(startTest)
-
-    continue
-
-
-main()
 
 
 # differentiate for careerResult disagree T YES
