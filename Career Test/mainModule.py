@@ -3,27 +3,40 @@
 
 
 from careerQuestions import careerInput
-import errorCheck
 import careerResult
 
+startTest = 1
 
-def main():
-    print(
-        "Hello, welcome to the Career Test",
-    )
-    firstName = input("Please enter your first name: ")
-    lastName = input("Please enter your last name: ")
-    name = firstName, lastName
+while startTest == True:
 
-    # Capturing the users' name, and checking for any error.
+    def main():
+        print("Hello, welcome to our Career Test!")
+        firstName = input("Please enter your first name: ")
+        lastName = input("Please enter your last name: ")
+        if firstName.isalpha() and lastName.isalpha():
+            name = firstName + " " + lastName
+        else:
+            print("Error! Your name should only contain letters.")
+        return
 
-    print("Welcome ", name)
-    startTest = int(
-        input("Enter (1) to start the test, and enter (2) to end your session")
-    )
-    careerInput(startTest)
+    def test():
+        startTest = int(
+            input("Please enter (1) to start the test, or (0) to end your session.")
+        )
+        careerInput(startTest)
 
-    # Prompting the user to begin the test.
+    continue
 
 
 main()
+
+
+# differentiate for careerResult disagree T YES
+
+# restart program A
+
+# error check in non-separate module A
+
+# more than one user define func AT
+
+# for loop logic T
