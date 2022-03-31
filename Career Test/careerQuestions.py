@@ -1,43 +1,116 @@
-# Anthony Saopa Phiri 20401485
-# Tan Jin Yi 20396553
+# Co-Authored by:
+# Names: Anthony Saopa Phiri | Tan Jin Yi
+# Student IDs: 20401485 | 20396553
 
 
 from careerResult import careerOutput1
 from careerResult import careerOutput2
 from careerResult import careerOutput3
+from careerResult import careerOutput4
+from careerResult import careerOutput5
 
 
-def careerInput(startTest):
-
+def creativeInput(startTest):
     while startTest == 1:
-        print("Please enter (1) if you agree, or (0) if you disagree.")
+        while True:
+            print(
+                "\nInstructions:\nEnter (1) if you agree \nEnter (0) if you disagree."
+            )
+            creativeChoice1 = int(
+                input("\nWould you enjoy designing a magazine cover? \nAnswer: ")
+            )
+            if creativeChoice1 in (0, 1):
+                break
+        while True:
+            creativeChoice2 = int(
+                input("\nWould you enjoy taking pictures of nature? \nAnswer: ")
+            )
+            if creativeChoice2 in (0, 1):
+                break
+            print("Please enter (1) if you agree, or (0) if you disagree.")
+        while True:
+            creativeChoice3 = int(
+                input(
+                    "\nDoes illustrating a children's book sounds interesting to you? \nAnswer: "
+                )
+            )
+            if creativeChoice3 in (0, 1):
+                break
+            print("Please enter (1) if you agree, or (0) if you disagree.")
+        creativeChoice = creativeChoice1 + creativeChoice2 + creativeChoice3
+        return stemInput(startTest, creativeChoice)
 
-        creativeChoice = int(input("Would you enjoy designing a magazine cover? "))
-        creativeChoice = (
-            int(input("Would you enjoy taking pictures of nature? ")) + creativeChoice
+
+def stemInput(startTest, creativeChoice):
+    while startTest == 1:
+        while True:
+            stemChoice1 = int(
+                input("\nDo scientific experiments interest you? \nAnswer: ")
+            )
+            if stemChoice1 in (0, 1):
+                break
+            print("Please enter (1) if you agree, or (0) if you disagree.")
+        while True:
+            stemChoice2 = int(
+                input(
+                    "\nDoes researching a new medicine sound attractive to you? \nAnswer: "
+                )
+            )
+            if stemChoice2 in (0, 1):
+                break
+            print("Please enter (1) if you agree, or (0) if you disagree.")
+        while True:
+            stemChoice3 = int(
+                input("\nDo you enjoy analyzing a molecular structure? \nAnswer: ")
+            )
+            if stemChoice3 in (0, 1):
+                break
+            print("Please enter (1) if you agree, or (0) if you disagree.")
+        stemChoice = stemChoice1 + stemChoice2 + stemChoice3
+        return laborInput(startTest, creativeChoice, stemChoice)
+
+
+def laborInput(startTest, creativeChoice, stemChoice):
+    while startTest == 1:
+        while True:
+            laborChoice1 = int(
+                input("\nWould you enjoy installing a hardwood floor? \nAnswer: ")
+            )
+            if laborChoice1 in (0, 1):
+                break
+            print("Please enter (1) if you agree, or (0) if you disagree.")
+        while True:
+            laborChoice2 = int(
+                input(
+                    "\nDo you enjoy assembling DIY (DO-IT-YOURSELF) products? \nAnswer: "
+                )
+            )
+            if laborChoice2 in (0, 1):
+                break
+            print("Please enter (1) if you agree, or (0) if you disagree.")
+        while True:
+            laborChoice3 = int(
+                input("\nDo you like to repair an Air Conditioning system? \nAnswer: ")
+            )
+            if laborChoice3 in (0, 1):
+                break
+            print("Please enter (1) if you agree, or (0) if you disagree.")
+        laborChoice = laborChoice1 + laborChoice2 + laborChoice3
+
+        print(
+            "\nYou've finished the test. Below are your final scores for: ",
+            "\nCreative Career: ",
+            creativeChoice,
+            "\nSTEM Career: ",
+            stemChoice,
+            "\nLabor Career: ",
+            laborChoice,
         )
-
-        stemChoice = int(input("Do scientific experiments interest you? "))
-        stemChoice = (
-            int(input("Does researching a new medicine sound attractive to you? "))
-            + stemChoice
-        )
-
-        laborChoice = int(input("Would you enjoy installing a hardwood floor? "))
-        laborChoice = (
-            int(input("Do you enjoy assembling DIY (DO-IT-YOURSELF) products? "))
-            + laborChoice
-        )
-        print("Score for all choices are: ", creativeChoice, stemChoice, laborChoice)
-
         careerOutput1(creativeChoice, stemChoice, laborChoice)
         careerOutput2(creativeChoice, stemChoice, laborChoice)
-        return careerOutput3(creativeChoice, stemChoice, laborChoice)
+        careerOutput3(creativeChoice, stemChoice, laborChoice)
+        careerOutput4(creativeChoice, stemChoice, laborChoice)
+        return careerOutput5(creativeChoice, stemChoice, laborChoice)
 
 
-# def errorCheck(creativeChoice, stemChoice, laborChoice):
-#     if creativeChoice.isdigit() and stemChoice.isdigit() and laborChoice.isdigit():
-#     return careerOutput(creativeChoice, stemChoice, laborChoice)
-#     else:
-#     ("Restart the program lol")
-#     return
+# Special thanks to: https://stackoverflow.com/questions/14907067/how-do-i-restart-a-program-based-on-user-input

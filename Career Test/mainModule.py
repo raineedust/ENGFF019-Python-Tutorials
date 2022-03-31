@@ -1,56 +1,51 @@
 # Career Test
 #
-# This program is provided as a Python pair-programming assessment.
+# This program is developed as according to the specs
+# outlined in ENGFF019's Python pair-programming assessment.
 #
 # Co-Authored by:
 # Names: Anthony Saopa Phiri | Tan Jin Yi
 # Student IDs: 20401485 | 20396553
 
 
-from careerQuestions import careerInput
+from careerQuestions import creativeInput
 
 
-def nameLol():
+def nameInput():
     print("Hello, welcome to our Career Test!")
-    firstName = input("Please enter your first name: ")
+    firstName = input("\nPlease enter your first name: ")
     lastName = input("Please enter your last name: ")
     name = firstName + " " + lastName
-    startLol(name)
+    programStart(name)
 
 
-def startLol(name):
-    print("Hi ", name)
-    startTest = int(
-        input("Please enter (1) to start the test, or (0) to end your session.")
-    )
-    hoorayLol(startTest, name)
+def programStart(name):
+    print("\nHi, " + name)
+    while True:
+        startTest = int(
+            input("\nPlease enter (1) to start the test, or (0) to end your session: ")
+        )
+        programRestart(startTest, name)
+        continue
 
 
-def hoorayLol(startTest, name):
+def programRestart(startTest, name):
     if startTest in (1, 0):
         while True:
             if startTest == 1:
-                careerInput(startTest)
-                check = input(
-                    "Hooray! You have come to the end of your session. Click any button to proceed..."
+                creativeInput(startTest)
+                enterRestart = input(
+                    "\nHooray, you have come to the end of our test session! \nPress ENTER to proceed ..."
                 )
-                startLol(name)
+                programStart(name)
+            elif startTest == 0:
+                quit()
 
 
-nameLol()
+nameInput()
 
 # Note to Dr. Reginary:
 #
-# We did not implement error checking for the name, as some people may prefer to be anonymous and use nicknames / usernames instead.
+# We did not implement error checking for the name, as some people may prefer to stay anonymous and use nicknames / usernames containing numbers or special characters instead.
 #
 # the if statement for startTest essentially functions as error checking.
-
-# differentiate for careerResult disagree T YES
-
-# restart program A
-
-# error check in non-separate module A
-
-# more than one user define func AT
-
-# for loop logic T
