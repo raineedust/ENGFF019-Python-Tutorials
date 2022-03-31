@@ -2,7 +2,9 @@
 # Tan Jin Yi 20396553
 
 
-from careerResult import careerOutput
+from careerResult import careerOutput1
+from careerResult import careerOutput2
+from careerResult import careerOutput3
 
 
 def careerInput(startTest):
@@ -28,7 +30,9 @@ def careerInput(startTest):
         )
         print("Score for all choices are: ", creativeChoice, stemChoice, laborChoice)
 
-        return careerOutput(creativeChoice, stemChoice, laborChoice)
+        careerOutput1(creativeChoice, stemChoice, laborChoice)
+        careerOutput2(creativeChoice, stemChoice, laborChoice)
+        return careerOutput3(creativeChoice, stemChoice, laborChoice)
 
 
 # def errorCheck(creativeChoice, stemChoice, laborChoice):
